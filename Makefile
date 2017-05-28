@@ -1,5 +1,5 @@
 BUILD_DIR = ./build
-DOC_DIR = ./doc
+DOC_DIR = ./docs
 JFLAGS = -g -cp $(BUILD_DIR)
 JC = javac
 .SUFFIXES: .java .class
@@ -16,8 +16,8 @@ default: classes
 
 classes: $(CLASSES:.java=.class)
 
-run:
-	@cd build && java pl.tivian.security.test.AuthTokenTest
+test:
+	@cd $(BUILD_DIR) && java pl.tivian.security.test.AuthTokenTest
 
 .PHONY: doc
 doc:
@@ -25,5 +25,5 @@ doc:
 
 clean:
 	@echo Deleting class files...
-	@find ./build -name "*.class" | xargs rm
+	@find $(BUILD_DIR) -name "*.class" | xargs rm
 	@echo done.

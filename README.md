@@ -5,22 +5,27 @@ It have functionality equivalent to [Google Authenticator App](https://play.goog
 
 ## How to build
 
-In order to compile java files execute:
-'''bash
+```bash
 make
-'''
+```
 
 ## How to use
 
 If you want to get currently valid key for given secret by authentication provider.
 Secret phrases are stored by Google Authenticator in file /data/data/com.google.android.apps.authenticator2/databases/databases
-'''java
+```java
 new AuthToken("secret phrase").getKey();
-'''
+```
+
+## How to run test suite
+
+```bash
+make test
+```
 
 ## API
 
-See the [Javadoc](https://github.com/tivian/auth-token/doc/index.html).
+See the [Javadoc](https://tivian.github.io/auth-token/doc/).
 
 ## Deployment
 
