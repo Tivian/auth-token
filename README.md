@@ -25,7 +25,7 @@ make test
 
 ## API
 
-See the [Javadoc](https://tivian.github.io/auth-token/doc/).
+See the [Javadoc](https://tivian.github.io/auth-token/docs/).
 
 ## Deployment
 
